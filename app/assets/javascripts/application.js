@@ -20,6 +20,6 @@
 //= require angular-route
 //= require ./angular/app
 //= require_tree ./angular/models
-//= require_tree ./angular/controllerss
+//= require_tree ./angular/controllers
 
 $(function(){ $(document).foundation(); });
