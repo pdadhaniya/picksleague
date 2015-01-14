@@ -22,3 +22,5 @@
 //= require_tree ./angular/models
 //= require_tree ./angular/controllerss
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
