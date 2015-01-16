@@ -12,7 +12,7 @@ app.config(['$routeProvider', function($routeProvider){
   })
   .when("/teams/:id", {
     templateUrl: "<%= asset_path('angular/templates/one-team.html') %>",
-    controller: "TeamController"
+    controller: "OneTeamController"
   })
   .otherwise({
     redirectTo: "/"
