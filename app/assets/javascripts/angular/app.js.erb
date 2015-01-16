@@ -14,6 +14,10 @@ app.config(['$routeProvider', function($routeProvider){
     templateUrl: "<%= asset_path('angular/templates/one-team.html') %>",
     controller: "OneTeamController"
   })
+  .when("/matchup", {
+    templateUrl: "<%= asset_path('angular/templates/matchup.html') %>",
+    controller: "MatchupController"
+  })
   .otherwise({
     redirectTo: "/"
   })
