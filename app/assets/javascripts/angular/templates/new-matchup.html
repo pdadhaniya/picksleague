@@ -4,7 +4,7 @@
     <div class="small-12 columns">
       <p>Select Week</p>
       <!-- <input type="number" ng-model="team.week"/> -->
-      <select ng-model="team.week" ng-options="week.week for week in weeks"></select>
+      <select ng-model="week" ng-options="week.week for week in weeks"></select>
     </div>
     <div class="large-6 small-12 columns">
       <p>Away Team</p>
@@ -24,4 +24,8 @@
 
 <div class="row">
   <a ng-click="viewMatchups()">View Matchup</a>
+</div>
+
+<div class="row">
+  {{week.week}}
 </div>

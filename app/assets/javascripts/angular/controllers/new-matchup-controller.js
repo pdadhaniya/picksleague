@@ -4,8 +4,9 @@ app.controller('NewMatchupController', ['$scope', '$location', 'Team', 'Matchup'
     $scope.viewMatchups = function() {
       $location.path('/matchups/')
     }
+    $scope.week = "";
     $scope.create = function(game) {
-      Matchup.createMatchup({matchup: {week: game.week.week, away_team_id: game.away_team.id, home_team_id: game.home_team.id}});
+      Matchup.createMatchup({matchup: {week: $scope.week.week, away_team_id: game.away_team.id, home_team_id: game.home_team.id}});
       console.log(game)
     };
     $scope.weeks = [
