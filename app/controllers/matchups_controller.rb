@@ -14,9 +14,7 @@ class MatchupsController < ApplicationController
     @matchups = Matchup.all
     @matchupsArray = []
     @matchups.each do |matchup|
-      away_team = Team.find(matchup.away_team_id).name
-      home_team = Team.find(matchup.home_team_id).name
-      @matchupsArray << {away: away_team, home: home_team}
+      @matchupsArray << {week: matchup.week, away: Team.find(matchup.away_team_id).name, home: Team.find(matchup.home_team_id).name}
     end
     render json: @matchupsArray
   end

@@ -22,10 +22,10 @@ app.config(['$routeProvider', function($routeProvider){
     templateUrl: "<%= asset_path('angular/templates/matchups.html') %>",
     controller: "MatchupController"
   })
-  .when("/matchups/:id", {
-    templateUrl: "<%= asset_path('angular/templates/matchups.html') %>",
-    controller: "MatchupController"
-  })
+  // .when("/matchups/:id", {
+  //   templateUrl: "<%= asset_path('angular/templates/matchups.html') %>",
+  //   controller: "MatchupController"
+  // })
   .otherwise({
     redirectTo: "/"
   })
