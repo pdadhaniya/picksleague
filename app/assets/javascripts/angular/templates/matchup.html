@@ -1,11 +1,18 @@
 <div class="row">
-  <div class="small-6 columns">
-    <p>Away Team</p>
-    <select ng-options="team.name for team in teams"></select>
-  </div>
 
-  <div class="small-6 columns">
-    <p>Home Team</p>
-    <select ng-options="team.name for team in teams"></select>
-  </div>
+  <form>
+    <div class="small-6 columns">
+      <p>Away Team</p>
+      <select ng-model="team.away_team" ng-options="team.name for team in teams"></select>
+    </div>
+
+    <div class="small-6 columns">
+      <p>Home Team</p>
+      <select ng-model="team.home_team" ng-options="team.name for team in teams"></select>
+    </div>
+
+    <div class="small-12 columns">
+      <input type="submit" class="button small" value="Add Matchup">
+    </div>
+  </form>
 </div>
