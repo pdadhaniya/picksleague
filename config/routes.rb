@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "matchups/get_matchups" => "matchups#get_matchups"
   resources :teams
-  resources :matchups
+  resources :matchups, only: [:index, :show, :create], defaults: {format: :json}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

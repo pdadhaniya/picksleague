@@ -1,6 +1,6 @@
 <div class="row">
 
-  <form>
+  <form ng-submit="create(team)">
     <div class="small-6 columns">
       <p>Away Team</p>
       <select ng-model="team.away_team" ng-options="team.name for team in teams"></select>
