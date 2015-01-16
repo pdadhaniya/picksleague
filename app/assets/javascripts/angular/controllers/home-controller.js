@@ -4,6 +4,9 @@ app.controller('HomeController', ['$scope', '$location',
       $location.path("/teams/");
     };
     $scope.viewAddMatchup = function() {
-      $location.path("/matchup");
+      $location.path("/matchups/new");
+    };
+    $scope.viewMatchups = function() {
+      $location.path("/matchups/")
     }
 }]);

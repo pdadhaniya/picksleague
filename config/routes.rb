@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get "matchups/get_matchups" => "matchups#get_matchups"
   resources :teams
+  resources :matchups
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
