@@ -1,4 +1,6 @@
-app.controller('HomeController', ['$scope', 'Team',
-  function($scope, Team) {
-    $scope.teams = Team.teams.query();
+app.controller('HomeController', ['$scope', '$location',
+  function($scope, $location) {
+    $scope.viewTeams = function() {
+      $location.path("/teams/");
+    }
 }]);
