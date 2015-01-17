@@ -20,8 +20,8 @@ app.controller('MatchupController', ['$scope', 'Team', 'Matchup',
       {week: 17}
     ];
     $scope.getWeek = function(selected) {
-      Matchup.weeklyMatchups({week:selected.week}, function(data) {
-        console.log(data);
+      Matchup.getWeek({week:selected.week}, function(data) {
+        $scope.weeklyMatchup = data;
       });
     };
   }])

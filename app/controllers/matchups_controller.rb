@@ -25,7 +25,11 @@ class MatchupsController < ApplicationController
 
   def get_week
     @weekly_matchups = Matchup.where(week: params["week"])
-    render json: @weekly_matchups
+    @teams = []
+    @weekly_matchups.each do |matchup|
+      @teams << {away_team: matchup.away_team.name, home_team: matchup.home_team.name}
+    end
+    render json: @teams
   end
 
   private

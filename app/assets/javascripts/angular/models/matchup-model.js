@@ -4,7 +4,7 @@ app.factory('Matchup', ['$resource',
       getWeek: {
         method: 'get',
         url: '/matchups/get_week',
-        isArray:true
+        isArray: true
       }
     });
   }]);
