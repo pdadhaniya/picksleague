@@ -1,7 +1,18 @@
+<div class="row collapse">
+  <form ng-submit="getWeek(selected)">
+    <div class="small-4 columns">
+      <select ng-model="selected" ng-options="week.week for week in weeks"></select>
+    </div>
+    <div class="small-8 columns">
+      <input class="button tiny" type="submit" value="search week">
+    </div>
+  </form>
+</div>
+
 <div class="row">
 
   <div class="small-12 columns" ng-repeat="matchup in allMatchups">
-    {{matchup.away}} vs. {{matchup.home}}
+    <!-- {{matchup.away}} vs. {{matchup.home}} -->
   </div>
-
+  {{weeklyMatchups}}
 </div>

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get "matchups/get_matchups" => "matchups#get_matchups"
+  get "matchups/get_week" => "matchups#get_week"
   resources :teams
   resources :matchups, only: [:index, :show, :create], defaults: {format: :json}
   # The priority is based upon order of creation: first created -> highest priority.
